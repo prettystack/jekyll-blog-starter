@@ -1,6 +1,7 @@
 ---
 layout: post
-title:  "Chapter II which treats of the first sally the ingenious Don Quixote made from home"
+title:  "Chapter II"
+subtitle: "The first sally the ingenious Don Quixote made from home"
 date:   1615-03-02 14:35:00
 categories: don quixote
 ---
