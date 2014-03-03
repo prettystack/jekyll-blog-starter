@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Chapter I: which treats of the character and pursuits of the famous gentleman Don Quixote of La Mancha"
+title:  "Chapter I which treats of the character and pursuits of the famous gentleman Don Quixote of La Mancha"
 date:   1615-03-01 22:38:52
 categories: don quixote
 ---
