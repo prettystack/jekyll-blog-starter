@@ -40,19 +40,17 @@
         <h2>Recent Posts</h2>
       </header>
       <ul>
-        <li><a href="#">Nothing happened</a></li>
-        <li><a href="#">My Dearest Cthulhu</a></li>
-        <li><a href="#">The Meme Meme</a></li>
-        <li><a href="#">Now Full Cyborg</a></li>
-        <li><a href="#">Temporal Flux</a></li>
+        {% for post in site.posts %}
+        <li><a href="#"><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
       </ul>
     </section>
                       
   <!-- Copyright -->
     <div id="copyright">
       <p>
-        &copy; 2013 An Untitled Site.<br />
-        Images: <a href="http://n33.co">n33</a>, <a href="http://fotogrph.com">fotogrph</a><br />
+        &copy; 2013 {{ site.name }}.<br />
+        Images: Gustave Doré<br />
         Design: <a href="http://html5up.net/">HTML5 UP</a>
       </p>
     </div>

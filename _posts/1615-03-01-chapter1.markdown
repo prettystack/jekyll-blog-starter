@@ -4,6 +4,7 @@ title:  "Chapter I"
 subtitle: "The character and pursuits of the famous gentleman Don Quixote of La Mancha"
 date:   1615-03-01 22:38:52
 categories: don quixote
+image: quixote1.jpg
 ---
 
 # Introduction
