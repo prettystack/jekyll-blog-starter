@@ -6,7 +6,7 @@
 
 skel.init(
 	{
-		prefix: 'css/style',
+		prefix: '/css/style',
 		resetCSS: true,
 		useOrientation: true,
 		breakpoints: {
