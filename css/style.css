@@ -110,42 +110,6 @@
 	{
 		width: 100%;
 	}
-	
-	table.style1
-	{
-	}
-	
-		table.style1 tbody tr:nth-child(2n+2)
-		{
-			background: #f4f4f4;
-		}
-		
-		table.style1 td
-		{
-			padding: 0.5em 1em 0.5em 1em;
-		}
-		
-		table.style1 th
-		{
-			text-align: left;
-			font-weight: 700;
-			padding: 0.75em 1em 0.75em 1em;
-		}
-	
-		table.style1 thead
-		{
-			border-bottom: solid 1px #ddd;
-		}
-		
-		table.style1 tfoot
-		{
-			border-top: solid 1px #ddd;
-			background: #eee;
-		}
-		
-		table.style1 tbody
-		{
-		}
 
 	form
 	{
@@ -323,28 +287,6 @@
 		
 		.button-huge
 		{
-		}
-
-	ul.style1
-	{
-		list-style: disc;
-		padding-left: 1em;
-	}
-	
-		ul.style1 li
-		{
-			padding-left: 0.5em;
-		}
-	
-	ol.style1
-	{
-		list-style: decimal;
-		padding-left: 1.25em;
-	}
-
-		ol.style1 li
-		{
-			padding-left: 0.25em;
 		}
 
 	.pager
@@ -1197,6 +1139,61 @@
 		position: relative;
 		z-index: 1;
 	}
+
+		#content-inner ul
+		{
+			list-style: disc;
+			padding-left: 1em;
+		}
+	
+			#content-inner ul li
+			{
+				padding-left: 0.5em;
+			}
+	
+		#content-inner ol
+		{
+			list-style: decimal;
+			padding-left: 1.25em;
+		}
+
+			#content-inner ol li
+			{
+				padding-left: 0.25em;
+			}
+
+	
+		#content-inner table tbody tr:nth-child(2n+2)
+		{
+			background: #f4f4f4;
+		}
+		
+		#content-inner table td
+		{
+			padding: 0.5em 1em 0.5em 1em;
+		}
+		
+		#content-inner table th
+		{
+			text-align: left;
+			font-weight: 700;
+			padding: 0.75em 1em 0.75em 1em;
+		}
+	
+		#content-inner table thead
+		{
+			border-bottom: solid 1px #ddd;
+		}
+		
+		#content-inner table tfoot
+		{
+			border-top: solid 1px #ddd;
+			background: #eee;
+		}
+		
+		#content-inner table tbody
+		{
+		}
 
 /*********************************************************************************/
 /* Copyright                                                                     */
