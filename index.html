@@ -30,7 +30,7 @@ layout: default
   {% if paginator.previous_page %}
     <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button previous">&laquo; Prev</a>
   {% else %}
-    <span>&laquo; Prev</span>
+    <span class="button previous">&laquo; Prev</span>
   {% endif %}
 
   <div class="pages">
@@ -48,7 +48,7 @@ layout: default
   {% if paginator.next_page %}
     <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button next">Next &raquo;</a>
   {% else %}
-    <span>Next &raquo;</span>
+    <span class="button next">Next &raquo;</span>
   {% endif %}
 </div>
 {% endif %}
