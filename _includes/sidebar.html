@@ -3,15 +3,17 @@
 <div id="sidebar">
 
   <!-- Logo -->
-    <div id="logo">
-      <h1> {{site.name}} </h1>
-    </div>
+    <a href="{{ site.url }}/">
+      <div id="logo">
+        <h1> {{site.name}} </h1>
+      </div>
+    </a>
 
   <!-- Nav -->
     <nav id="nav">
       <ul>
-        <li class="current_page_item"><a href="#">Latest Post</a></li>
-        <li><a href="#">Archives</a></li>
+        <li><a href="{{ site.url }}/">Home</a></li>
+        <li class="current_page_item"><a href="{{site.posts.first.url}}">Latest Post</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
@@ -40,7 +42,7 @@
         <h2>Recent Posts</h2>
       </header>
       <ul>
-        {% for post in site.posts %}
+        {% for post in site.posts limit:5 %}
         <li><a href="#"><a href="{{ post.url }}">{{ post.title }}</a></li>
         {% endfor %}
       </ul>

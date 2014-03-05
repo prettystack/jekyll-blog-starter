@@ -18,7 +18,7 @@ layout: default
     </ul>
   </div>
   {% if post.image != "" %}
-    <a href="#" class="image image-full"><img src="{{ site.url }}/images/{{ post.image }}" alt="" /></a>
+    <a href="{{ post.url }}" class="image image-full"><img src="{{ site.url }}/images/{{ post.image }}" alt="" /></a>
   {% endif %}
 </article>
 {% endfor %}
