@@ -2,6 +2,11 @@
 layout: default
 ---
 
+
+
+{% comment %}
+Display a post preview.
+{% endcomment %}
 {% for post in paginator.posts %}
 <article class="is-post is-post-excerpt">
   <header>
@@ -9,7 +14,10 @@ layout: default
     <span class="byline"> {{ post.subtitle }} </span>
   </header>
   <div class="info">
-    <span class="date">{{ post.date | date_to_string }} <!-- <span class="month">Jan<span>uary</span></span> <span class="day">14</span><span class="year">, 2013</span> --></span>
+
+    <span class="date">
+      <span class="month">{{ post.date | date: "%b"}}<span></span></span> <span class="day">{{ post.date | date: "%d"}}</span><span class="year">, {{ post.date | date: "%Y"}}</span>
+    </span>
     <ul class="stats">
       <li><a href="#" class="fa fa-comment">16</a></li>
       <li><a href="#" class="fa fa-heart">32</a></li>
@@ -20,11 +28,18 @@ layout: default
   {% if post.image != "" %}
     <a href="{{ post.url }}" class="image image-full"><img src="{{ site.url }}/images/{{ post.image }}" alt="" /></a>
   {% endif %}
+  <div class="post">
+    {{ post.excerpt }}
+  </div>
+
+  <a href="{{ post.url }}" class="image image-full">Read more...</a>
 </article>
 {% endfor %}
 
 
-
+{% comment %}
+The paginator only show a few posts sorted by date, it can be configured in "_config.yml".
+{% endcomment %}
 {% if paginator.total_pages > 1 %}
 <div class="pager">
   {% if paginator.previous_page %}
