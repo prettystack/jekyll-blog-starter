@@ -2,7 +2,7 @@
 layout: post
 title:  "Chapter III"
 subtitle: "The droll way in which Don Quixote had himself dubbed a knight"
-date:   1615-03-03 20:10:00
+date:   2014-03-07 20:10:00
 categories: don quixote
 image: quixote3.jpg
 ---
