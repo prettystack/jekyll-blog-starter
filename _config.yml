@@ -1,5 +1,12 @@
 name: Don Quiblog
 markdown: maruku
 pygments: true
+
+# How many post per page on index?
 paginate: 2
+
+# Jekyll truncate post at this separator to provide an excerpt on index
 excerpt_separator: <!--more-->
+
+# Disqus configuration
+disqus_shortname: donquiblog

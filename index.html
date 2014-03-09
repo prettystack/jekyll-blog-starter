@@ -19,13 +19,13 @@ Display a post preview.
       <span class="month">{{ post.date | date: "%b"}}<span></span></span> <span class="day">{{ post.date | date: "%d"}}</span><span class="year">, {{ post.date | date: "%Y"}}</span>
     </span>
     <ul class="stats">
-      <li><a href="#" class="fa fa-comment">16</a></li>
-      <li><a href="#" class="fa fa-heart">32</a></li>
+      <li><a href="{{ post.url }}#disqus_thread" class="fa fa-comment">?</a></li>
+<!--       <li><a href="#" class="fa fa-heart">32</a></li>
       <li><a href="#" class="fa fa-twitter">64</a></li>
-      <li><a href="#" class="fa fa-facebook">128</a></li>
+      <li><a href="#" class="fa fa-facebook">128</a></li> -->
     </ul>
   </div>
-  {% if post.image != "" %}
+  {% if post.image %}
     <a href="{{ post.url }}" class="image image-full"><img src="{{ site.url }}/images/{{ post.image }}" alt="" /></a>
   {% endif %}
   <div class="post">

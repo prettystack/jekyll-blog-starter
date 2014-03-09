@@ -16,19 +16,23 @@ layout: default
     </span>
 
     <ul class="stats">
-      <li><a href="#" class="fa fa-comment">16</a></li>
-      <li><a href="#" class="fa fa-heart">32</a></li>
+      <li><a href="{{ post.url }}#disqus_thread" class="fa fa-comment">?</a></li>
+<!--       <li><a href="#" class="fa fa-heart">32</a></li>
       <li><a href="#" class="fa fa-twitter">64</a></li>
-      <li><a href="#" class="fa fa-facebook">128</a></li>
+      <li><a href="#" class="fa fa-facebook">128</a></li> -->
     </ul>
   </div>
 
-  {% if page.image != "" %}
+  {% if page.image %}
     <a href="{{ page.url }}" class="image image-full"><img src="{{ site.url }}/images/{{ page.image }}" alt="" /></a>
   {% endif %}
 
   <div class="post">
     {{ content }}
+
+  {% if site.disqus_shortname %}
+    {% include disqus_thread.html %}
+  {% endif %}
   </div>
 
 </article>
