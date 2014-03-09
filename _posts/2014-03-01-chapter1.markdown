@@ -4,12 +4,10 @@ title:  "Chapter I"
 subtitle: "The character and pursuits of the famous gentleman Don Quixote of La Mancha"
 date:   2014-03-01 22:38:52
 categories: don quixote
-image: quixote1.jpg
+image: c22a.jpg
 ---
 
-# Introduction
-
-## Characters
+### Characters
 
 In a village of La Mancha, the name of which I have no desire to call to mind, there lived not long since one of those gentlemen that keep a lance in the lance-rack, an old buckler, a lean hack, and a greyhound for coursing. An olla of rather more beef than mutton, a salad on most nights, scraps on Saturdays, lentils on Fridays, and a pigeon or so extra on Sundays, made away with three-quarters of his income. The rest of it went in a doublet of fine cloth and velvet breeches and shoes to match for holidays, while on week-days he made a brave figure in his best homespun. He had in his house:
 
@@ -21,7 +19,7 @@ In a village of La Mancha, the name of which I have no desire to call to mind, t
 
 The age of this gentleman of ours was bordering on fifty; he was of a hardy habit, spare, gaunt-featured, a very early riser and a great sportsman. They will have it his surname was Quixada or Quesada (for here there is some difference of opinion among the authors who write on the subject), although from reasonable conjectures it seems plain that he was called **Quexana**. This, however, is of but little importance to our tale; it will be enough not to stray a hair's breadth from the truth in the telling of it.
 
-## Hobby
+### Hobby
 
 You must know, then, that the *above-named gentleman* whenever he was at leisure (which was mostly all the year round) gave himself up to reading books of chivalry with such ardour and avidity that he almost entirely neglected the pursuit of his field-sports, and even the management of his property; and to such a pitch did his eagerness and infatuation go that he sold many an acre of tillageland to buy books of chivalry to read, and brought home as many of them as he could get.
 
