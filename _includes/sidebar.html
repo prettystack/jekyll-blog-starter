@@ -2,56 +2,67 @@
 <!-- Sidebar -->
 <div id="sidebar">
 
-  <!-- Logo -->
+    <!-- Logo -->
     <a href="{{ site.url }}/">
       <div id="logo">
         <h1> {{site.name}} </h1>
       </div>
     </a>
 
-  <!-- Nav -->
-    <nav id="nav">
+    <!-- Nav -->
+    {% comment %}
+    Build a list of static pages as defined in "_data/menus.yml"
+    Then Add a list of the 5 most recent posts.
+    {% endcomment %}
+    <nav class="nav">
       <ul>
-        <li><a href="{{ site.url }}/">Home</a></li>
-        <li class="current_page_item"><a href="{{site.posts.first.url}}">Latest Post</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        {% for menu in site.data.menus %}
+          {% if page.url == menu.url %}
+            <li class="current_page_item"><a href="#">{{menu.name}}</a></li>
+          {% else %}
+            <li><a href="{{menu.url}}">{{menu.name}}</a></li>
+          {% endif %}
+        {% endfor %}
       </ul>
     </nav>
-
-  <!-- Search -->
-    <section class="is-search">
-      <form method="post" action="#">
-        <input type="text" class="text" name="search" placeholder="Search" />
-      </form>
-    </section>
-
-  <!-- Text -->
-    <section class="is-text-style1">
-      <div class="inner">
-        <p>
-          <strong>Striped:</strong> A free and fully responsive HTML5 site
-          template designed by <a href="http://n33.co/">AJ</a> for <a href="http://html5up.net/">HTML5 up!</a>
-        </p>
-      </div>
-    </section>
-
-  <!-- Recent Posts -->
-    <section class="is-recent-posts">
+    <nav class="nav">
       <header>
         <h2>Recent Posts</h2>
       </header>
       <ul>
         {% for post in site.posts limit:5 %}
-        <li><a href="#"><a href="{{ post.url }}">{{ post.title }}</a></li>
+
+          {% if page.url == post.url %}
+            <li class="current_page_item"><a href="{{ post.url }}">{{ post.title }}</a></li>
+          {% else %}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+          {% endif %}
         {% endfor %}
       </ul>
+    </nav>
+
+  <!-- Search -->
+<!--<section class="is-search">
+      <form method="post" action="#">
+        <input type="text" class="text" name="search" placeholder="Search" />
+      </form>
+    </section> -->
+
+  <!-- Text -->
+    <section class="is-text-style1">
+      <div class="inner">
+        <p>
+          <a href="http://prettystack.com">Prettystack</a>: Jekyll demo application.<br />
+          Template designed by <a href="http://n33.co/">AJ</a> for <a href="http://html5up.net/">HTML5 up!</a>
+        </p>
+      </div>
     </section>
-                      
+  
   <!-- Copyright -->
     <div id="copyright">
       <p>
-        &copy; 2013 {{ site.name }}.<br />
+        &copy; 2014 {{ site.name }}.<br />
+        Content: Miguel de Cervantes<br />
         Images: Gustave Doré<br />
         Design: <a href="http://html5up.net/">HTML5 UP</a>
       </p>
