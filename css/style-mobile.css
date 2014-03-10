@@ -48,12 +48,12 @@
 /* Title Bar                                                                     */
 /*********************************************************************************/
 
-	#titleBar
+	#titlebar
 	{
 		background: #364050 url('images/bg1.png');
 	}
 
-	#titleBar .title
+	#titlebar .title
 	{
 		color: #fff;
 		line-height: 44px;
@@ -66,7 +66,7 @@
 		text-align: center;
 	}
 
-	#titleBar .toggle
+	#titlebar .toggle
 	{
 		text-indent: -9999px;
 		width: 80px;
@@ -76,7 +76,7 @@
 		top: 0;
 	}
 
-		#titleBar .toggle:before
+		#titlebar .toggle:before
 		{
 			content: '';
 			display: block;
@@ -90,7 +90,7 @@
 			box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,0.15), 0 0.025em 0.15em 0em rgba(0,0,0,0.25);
 		}
 
-		#titleBar .toggle:after
+		#titlebar .toggle:after
 		{
 			content: '';
 			display: block;
@@ -103,16 +103,16 @@
 			opacity: 0.75;
 		}
 
-		#titleBar .toggle:active
+		#titlebar .toggle:active
 		{
 		}
 
-			#titleBar .toggle:active:before
+			#titlebar .toggle:active:before
 			{
 				background-color: #d95673;
 			}
 
-			#titleBar .toggle:active:after
+			#titlebar .toggle:active:after
 			{
 				opacity: 1.0;
 			}

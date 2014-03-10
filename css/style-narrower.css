@@ -18,12 +18,13 @@
 /* Title Bar                                                                     */
 /*********************************************************************************/
 
-	#titleBarNarrower
+	#titlebar
 	{
+		display: block;
 		background: #364050 url('images/bg1.png');
 	}
 
-	#titleBarNarrower .title
+	#titlebar .title
 	{
 		color: #fff;
 		line-height: 60px;
@@ -36,7 +37,7 @@
 		text-align: center;
 	}
 
-	#titleBarNarrower .toggle
+	#titlebar .toggle
 	{
 		text-indent: -9999px;
 		width: 80px;
@@ -46,7 +47,7 @@
 		top: 0;
 	}
 
-		#titleBarNarrower .toggle:before
+		#titlebar .toggle:before
 		{
 			content: '';
 			display: block;
@@ -60,7 +61,7 @@
 			box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,0.15), 0 0.025em 0.15em 0em rgba(0,0,0,0.25);
 		}
 
-		#titleBarNarrower .toggle:after
+		#titlebar .toggle:after
 		{
 			content: '';
 			display: block;
@@ -73,16 +74,16 @@
 			opacity: 0.75;
 		}
 
-		#titleBarNarrower .toggle:active
+		#titlebar .toggle:active
 		{
 		}
 
-			#titleBarNarrower .toggle:active:before
+			#titlebar .toggle:active:before
 			{
 				background-color: #d95673;
 			}
 
-			#titleBarNarrower .toggle:active:after
+			#titlebar .toggle:active:after
 			{
 				opacity: 1.0;
 			}
@@ -153,4 +154,6 @@
 		width: auto;
 		background: none;
 		padding: 30px 20px 30px 20px;
+
+		display: none;
 	}
