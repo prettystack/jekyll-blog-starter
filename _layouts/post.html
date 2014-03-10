@@ -16,7 +16,9 @@ layout: default
     </span>
 
     <ul class="stats">
-      <li><a href="{{ post.url }}#disqus_thread" class="fa fa-comment">?</a></li>
+      {% if site.disqus.shortname %}
+        <li><a href="{{ page.url }}#disqus_thread" class="fa fa-comment">?</a></li>
+      {% endif %}
 <!--       <li><a href="#" class="fa fa-heart">32</a></li>
       <li><a href="#" class="fa fa-twitter">64</a></li>
       <li><a href="#" class="fa fa-facebook">128</a></li> -->
@@ -30,7 +32,7 @@ layout: default
   <div class="post">
     {{ content }}
 
-  {% if site.disqus_shortname %}
+  {% if site.disqus.shortname %}
     {% include disqus_thread.html %}
   {% endif %}
   </div>
