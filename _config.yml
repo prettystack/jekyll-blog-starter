@@ -1,6 +1,6 @@
+
+# Site name
 name: Don Quiblog
-markdown: maruku
-pygments: true
 
 # How many post per page on index?
 paginate: 2
@@ -8,5 +8,14 @@ paginate: 2
 # Jekyll truncate post at this separator to provide an excerpt on index
 excerpt_separator: <!--more-->
 
-# Disqus configuration
-disqus_shortname: donquiblog
+# Only use this variable when absolutely necessary (sitemap.txt)
+production_url : http://prettystack.com/striped/jekyll
+
+# Disqus configuration, comment these lines to disable it
+disqus:
+  shortname: donquiblog
+
+# Jekyll internal conf
+markdown: maruku
+pygments: true
+exclude: ["readme.md", "license.txt"]
