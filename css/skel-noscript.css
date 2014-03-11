@@ -15,11 +15,9 @@
 /* Container */
 
 	body {
-		min-width: 1200px;
 	}
 
 	.container {
-		width: 1200px;
 		margin-left: auto;
 		margin-right: auto;
 	}

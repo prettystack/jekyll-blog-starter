@@ -5,7 +5,9 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700|Open+Sans+Condensed:300,700" rel="stylesheet" />
+
 
 
     <link rel="stylesheet" href="{{ site.url }}/css/skel-noscript.css" />
@@ -18,8 +20,10 @@
     <link rel="stylesheet" media="(min-width:641px) and (max-width:1000px)" href="{{ site.url }}/css/style-narrower.css" />
     <link rel="stylesheet" media="(min-width:1201px)" href="{{ site.url }}/css/style-wide.css" />
 
+    <script src="{{ site.url }}/js/toggleSidebar.js"></script>
+
     <!--[if lte IE 9]><link rel="stylesheet" href="{{ site.url }}/css/ie9.css" /><![endif]-->
-    <!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="{{ site.url }}/css/ie8.css" /><![endif]-->
+    <!--[if lte IE 8]><script src="{{ site.url }}/js/html5shiv.js"></script><link rel="stylesheet" href="{{ site.url }}/css/ie8.css" /><![endif]-->
     <!--[if lte IE 7]><link rel="stylesheet" href="{{ site.url }}/css/ie7.css" /><![endif]-->
   </head>
 
@@ -40,8 +44,8 @@
 
       </div>
 
-      <div id="titlebar" class="skel-panels-overlay skel-panels-overlay-top-left" style="position: fixed; width: 100%; height: 60px; top: 0px; left: 0px; z-index: 10002;">
-        <div class="toggle">
+      <div id="titlebar" class="skel-panels-overlay skel-panels-overlay-top-left">
+        <div class="toggle" id="slide-menu-button">
         </div>
         <div class="title">
             <h1> {{site.name}} </h1>
