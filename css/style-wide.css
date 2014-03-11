@@ -77,7 +77,6 @@
 				height: 100%;
 				background-image: url('images/bg2.png');
 				opacity: 0.5;
-				z-index: -1;
 			}
 
 			.is-post .info .date
