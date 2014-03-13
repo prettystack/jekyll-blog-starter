@@ -24,10 +24,9 @@
 		background: #364050 url('images/bg1.png');
 		position: fixed;
 		width: 100%;
-		height: 60px;
 		top: 0px;
 		left: 0px;
-		z-index: 15;
+		z-index: 1;
 	}
 
 	#titlebar .title
@@ -45,7 +44,6 @@
 
 	#titlebar .toggle
 	{
-		text-indent: -9999px;
 		width: 80px;
 		height: 80px;
 		position: absolute;
@@ -141,12 +139,6 @@
 		margin-top: 60px;
 	}
 
-	#content.open
-	{
-		transform: translate3d(12em, 0, 0);
-		-webkit-transform: translate3d(12em, 0, 0);
-	}
-
 		body.left-sidebar #content
 		{
 			margin-left: 0;
@@ -163,8 +155,23 @@
 		
 	#sidebar
 	{
-		width: auto;
+		position: fixed;
+		top: 0;
 		padding: 30px 20px 30px 20px;
+		margin-left: -14em;
+		height: 100% !important;
 
-		z-index: 1;
+		-moz-transition: margin-left .25s ease-in-out;
+		-webkit-transition: margin-left .25s ease-in-out;
+		-o-transition: margin-left .25s ease-in-out;
+		-ms-transition: margin-left .25s ease-in-out;
+		transition: margin-left .25s ease-in-out;
+
+		-ms-overflow-y: auto;
+		overflow-y: auto;
+	}
+
+	#sidebar.open
+	{
+		margin-left: 0px;
 	}

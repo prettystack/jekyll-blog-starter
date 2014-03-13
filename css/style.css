@@ -944,7 +944,6 @@
 				position: absolute;
 				right: 0.45em;
 				top: 0.45em;
-				z-index: 10;
 				text-shadow: none;
 				color: #c8ccce;
 			}
@@ -1046,7 +1045,7 @@
 	{
 		color: #929da4;
 		text-shadow: -1px -1px 0px rgba(0,0,0,0.5);
-		height: 100%;
+		width: 14em;
 	}
 
 		#sidebar form input,
@@ -1121,28 +1120,9 @@
 	{
 		position: relative;
 		background-color: #fff;
-		z-index: 10;
-
-		transition: all 0.2s ease-out;
-		-webkit-transition: all 0.2s ease-out;
-		transform: translate3d(0, 0, 0);
-		-webkit-transform: translate3d(0, 0, 0);
+		background-image: url('images/bg2.png');
 	}
-	
-		#content:after
-		{
-			content: '';
-			display: block;
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 100%;
-			background-image: url('images/bg2.png');
-			opacity: 0.5;
-			z-index: -1;
-		}
-	
+		
 	#content-inner
 	{
 		position: relative;
