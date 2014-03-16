@@ -20,7 +20,7 @@ Make sure to check out all our [starter kits](https://github.com/prettystack/), 
 
 ## Configuration
 
-Read the commented _config.yml file for more information.
+Read the commented `_config.yml` file for more information.
 
 ### Disqus integration
 
@@ -29,11 +29,16 @@ Add your disqus shortname in *_config.yml* to enable disqus threads. For correct
 
 ## Credits
 
-* *Striped!* theme from [HTML5 UP](http://html5up.net/) (Creative Commons Attribution 3.0).
+### Jekyll
+
 * [Jekyll](http://jekyllrb.com) static site generator. (MIT license)
 * Some pages and ideas from [Jekyll-bootstrap](http://jekyllbootstrap.com/) (MIT license)
 
-Placeholder content:
+### Theme
+
+* *Striped!* theme from [HTML5 UP](http://html5up.net/) (Creative Commons Attribution 3.0).
+
+### Placeholder
 
 * Text: "The Ingenious Gentleman Don Quixote of La Mancha" by Miguel de Cervantes (public domain)
 * Illustrations by Gustave Doré (public domain)
@@ -42,4 +47,4 @@ Placeholder content:
 
 ## License
 
-See LICENSE.
+See `LICENSE`.
