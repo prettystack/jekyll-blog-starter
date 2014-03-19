@@ -6,17 +6,19 @@ This is a starter kit to build a [Jekyll](http://jekyllrb.com) powered blog in a
 
 Make sure to check out all our [starter kits](https://github.com/prettystack/), we will soon have starter kit for corporate website and admin interface.
 
+![Striped Preview](http://prettystack.com/img/60964924.donquiblog3.png)
+
 
 ## Getting started
 
-* Install [Ruby, Jekyll](http://jekyllrb.com/docs/installation/) and Kramdown (`gem install kramdown`)
 * Clone repository (`git clone https://github.com/prettystack/jekyll-blog-starter.git`)
+* Install [Ruby, Jekyll](http://jekyllrb.com/docs/installation/) and dependencies (see `Gemfile`)
 * Launch test server `jekyll serve --watch`
 * Browse the site at [localhost:4000](http://localhost:4000)
 * If necessary you can [migrate your existing blog](http://jekyllrb.com/docs/migrations/)
 * Remove placeholder text and images from `_posts` and `images` folders
-* Customize your `_config.yml` (see below)
-* Add new posts by creating markdown file in the `_posts` directory
+* Customize your `_config.yml` (see configuration below)
+* Add new posts by creating markdown files in the `_posts` directory
 
 
 ## Configuration

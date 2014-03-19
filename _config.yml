@@ -1,38 +1,47 @@
+# ---------------------------------------------------------
+# Theme selection
+# (theme should be installed in ./themes/ directory)
+# ---------------------------------------------------------
+source: ./themes/striped
 
+# ---------------------------------------------------------
+# Blog configuration
+# ---------------------------------------------------------
 # Site name
 name: Don Quiblog
-
-# Theme used for the site (should be installed in ./themes/ directory)
-source:      ./themes/striped
-destination: ./_site
-plugins:     ./_plugins
 
 # Number of posts per page on index
 paginate: 2
 
-# Jekyll truncate post at this separator to provide an excerpt on index
-excerpt_separator: <!--more-->
-
 # Only use this variable when absolutely necessary (sitemap.txt)
 production_url : http://prettystack.com/striped/jekyll
 
-# Disqus configuration, comment these lines to disable it
+
+# ---------------------------------------------------------
+# Third party services configuration
+# ---------------------------------------------------------
+# Disqus conf, comment these lines to disable Disqus
 disqus:
   shortname: donquiblog
 
 
+# ---------------------------------------------------------
 # Assets pipeline configuration
+# ---------------------------------------------------------
 assets:
   dirname: assets
   baseurl: /assets/
-  # sources:
-  #   - _assets/images
-  #   - _assets/javascripts
-  #   - _assets/stylesheets
   # js_compressor: uglifier
-  # css_compressor: yui
+  # css_compressor: sass
 
+# ---------------------------------------------------------
 # Jekyll internal conf
+# ---------------------------------------------------------
 markdown: kramdown
 pygments: true
 exclude: ["readme.md", "LICENSE", "Gemfile"]
+# Force standard directory for plugins and generation
+destination: ./_site
+plugins: ./_plugins
+# Jekyll truncate post at this separator to provide an excerpt on index
+excerpt_separator: <!--more-->
