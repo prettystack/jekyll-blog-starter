@@ -9,11 +9,12 @@ Make sure to check out all our [starter kits](https://github.com/prettystack/), 
 
 ## Getting started
 
-* Install [Ruby and Jekyll](http://jekyllrb.com/docs/installation/)
+* Install [Ruby, Jekyll](http://jekyllrb.com/docs/installation/) and Kramdown (`gem install kramdown`)
 * Clone repository (`git clone https://github.com/prettystack/jekyll-blog-starter.git`)
 * Launch test server `jekyll serve --watch`
 * Browse the site at [localhost:4000](http://localhost:4000)
 * If necessary you can [migrate your existing blog](http://jekyllrb.com/docs/migrations/)
+* Remove placeholder text and images from `_posts` and `images` folders
 * Customize your `_config.yml` (see below)
 * Add new posts by creating markdown file in the `_posts` directory
 

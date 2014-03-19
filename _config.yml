@@ -2,7 +2,12 @@
 # Site name
 name: Don Quiblog
 
-# How many post per page on index?
+# Theme used for the site (should be installed in ./themes/ directory)
+source:      ./themes/striped
+destination: ./_site
+plugins:     ./_plugins
+
+# Number of posts per page on index
 paginate: 2
 
 # Jekyll truncate post at this separator to provide an excerpt on index
@@ -15,7 +20,19 @@ production_url : http://prettystack.com/striped/jekyll
 disqus:
   shortname: donquiblog
 
+
+# Assets pipeline configuration
+assets:
+  dirname: assets
+  baseurl: /assets/
+  # sources:
+  #   - _assets/images
+  #   - _assets/javascripts
+  #   - _assets/stylesheets
+  # js_compressor: uglifier
+  # css_compressor: yui
+
 # Jekyll internal conf
-markdown: maruku
+markdown: kramdown
 pygments: true
-exclude: ["readme.md", "license.txt"]
+exclude: ["readme.md", "LICENSE", "Gemfile"]

@@ -4,15 +4,47 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+
+@media (max-width: 640px) {
 /*********************************************************************************/
 /* Basic                                                                         */
 /*********************************************************************************/
 
-	body
+	body, input, textarea
 	{
-		min-width: 641px;
-		font-size: 14pt;
+		line-height: 1.75em;
+		font-size: 11pt;
+		letter-spacing: 0;
 	}
+
+	h2, h3, h4, h5, h6
+	{
+		font-size: 1.5em;
+	}
+
+	section,
+	article
+	{
+		clear: both;
+	}
+
+	.button
+	{
+		display: block;
+		width: 100%;
+		font-size: 1.25em;
+		padding: 0.75em 0 0.75em 0;
+		margin: 0.5em 0 0.5em 0;
+	}
+
+	.pager
+	{
+	}
+
+		.pager .pages
+		{
+			display: none;
+		}
 
 /*********************************************************************************/
 /* Title Bar                                                                     */
@@ -21,7 +53,7 @@
 	#titlebar
 	{
 		display: block;
-		background: #364050 url('images/bg1.png');
+		background: #364050 image-url('bg1.png');
 		position: fixed;
 		width: 100%;
 		top: 0px;
@@ -32,7 +64,7 @@
 	#titlebar .title
 	{
 		color: #fff;
-		line-height: 60px;
+		line-height: 44px;
 		font-size: 1.25em;
 		font-family: 'Open Sans Condensed', sans-serif;
 		font-weight: 700;
@@ -45,7 +77,7 @@
 	#titlebar .toggle
 	{
 		width: 80px;
-		height: 80px;
+		height: 60px;
 		position: absolute;
 		left: 0;
 		top: 0;
@@ -58,9 +90,9 @@
 			position: absolute;
 			left: 7px;
 			top: 7px;
-			width: 80px;
-			height: 45px;
-			background: #c94663 url('images/bg1.png');
+			width: 50px;
+			height: 30px;
+			background: #c94663 image-url('bg1.png');
 			border-radius: 5px;
 			box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,0.15), 0 0.025em 0.15em 0em rgba(0,0,0,0.25);
 		}
@@ -70,11 +102,11 @@
 			content: '';
 			display: block;
 			position: absolute;
-			left: 37px;
-			top: 22px;
-			width: 60px;
+			left: 22px;
+			top: 15px;
+			width: 50px;
 			height: 30px;
-			background: url('images/mobileUI-site-nav-opener-bg.svg') 0 0 no-repeat;
+			background: image-url('mobileUI-site-nav-opener-bg.svg') 0 0 no-repeat;
 			opacity: 0.75;
 		}
 
@@ -96,11 +128,85 @@
 /* Side Panel                                                                    */
 /*********************************************************************************/
 
-	#sidePanelNarrower
+	#sidePanel
 	{
-		background: #364050 url('images/bg1.png');
-		box-shadow: inset -1px 0 0 0 rgba(255,255,255,0.15), inset -0.1em 0 0.5em 0 rgba(0,0,0,0.25);
+		background: #28303a image-url('bg1.png');
 	}
+
+/*********************************************************************************/
+/* Section/Article Types                                                         */
+/*********************************************************************************/
+
+	.is-post
+	{
+		padding-bottom: 5em;
+		margin-bottom: 6em;
+	}
+
+		.is-post .byline
+		{
+			font-size: 1em;
+			font-family: 'Source Sans Pro', sans-serif;
+			line-height: 1.5em;
+		}
+
+		.is-post .info
+		{
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			border-top: solid 1px #ddd;
+			padding-top: 0.5em;
+		}
+
+			.is-post .info .date
+			{
+				display: inline;
+			}
+			
+				.is-post .info .date .year
+				{
+					display: none;
+				}
+				
+				.is-post .info .date .month span
+				{
+					display: none;
+				}
+
+			.is-post .info .stats
+			{
+				display: inline;
+				border-left: solid 1px #ddd;
+				margin-left: 0.75em;
+				padding-left: 0.75em;
+			}
+
+				.is-post .info .stats li
+				{
+					display: inline-block;
+					margin-right: 0.85em;
+				}
+
+					.is-post .info .stats li a
+					{
+						display: inline-block;
+						opacity: 0.5;
+					}
+
+						.is-post .info .stats li a:before
+						{
+							position: relative;
+							top: 0.1em;
+							margin-right: 0.5em;
+							opacity: 0.35;
+						}
+
+						.is-post .info .stats li a:active
+						{
+							opacity: 1.0;
+						}
 
 /*********************************************************************************/
 /* Logo                                                                          */
@@ -136,28 +242,23 @@
 		
 	#content
 	{
-		margin-top: 60px;
+		margin-top: 44px;
+		padding: 3em 20px 2em 20px;
 	}
+	
 
-		body.left-sidebar #content
-		{
-			margin-left: 0;
-		}
-		
-		body.right-sidebar #content
-		{
-			margin-right: 0;
-		}
-		
 /*********************************************************************************/
 /* Sidebar                                                                       */
 /*********************************************************************************/
-		
+
 	#sidebar
 	{
 		position: fixed;
 		top: 0;
-		padding: 30px 20px 30px 20px;
+		padding: 20px 12px 20px 10px;
+		background: #364050 image-url('bg1.png');
+		box-shadow: inset -1px 0 0 0 rgba(255,255,255,0.15), inset -0.1em 0 0.5em 0 rgba(0,0,0,0.25);
+
 		margin-left: -14em;
 		height: 100% !important;
 
@@ -171,7 +272,33 @@
 		overflow-y: auto;
 	}
 
+
+
 	#sidebar.open
 	{
 		margin-left: 0px;
 	}
+	
+/*********************************************************************************/
+/* Copyright                                                                     */
+/*********************************************************************************/
+
+	#copyright
+	{
+		margin: 2em 0 0 0;
+		text-align: center;
+	}
+
+		#copyright p
+		{
+			font-size: 0.9em;
+			line-height: 2em;
+		}
+	
+		#copyright:before
+		{
+			height: 0.5em;
+			margin: 0 0 2em 0;
+		}
+
+}
