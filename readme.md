@@ -13,7 +13,7 @@ Make sure to check out all our [starter kits](https://github.com/prettystack/), 
 
 * Clone repository (`git clone https://github.com/prettystack/jekyll-blog-starter.git`)
 * Install [Ruby, Jekyll](http://jekyllrb.com/docs/installation/) and dependencies (see `Gemfile`)
-* Launch test server `jekyll serve --watch`
+* Launch test server `jekyll serve --watch --config _config.yml,themes/striped/_config.yml`
 * Browse the site at [localhost:4000](http://localhost:4000)
 * If necessary you can [migrate your existing blog](http://jekyllrb.com/docs/migrations/)
 * Remove placeholder text and images from `_posts` and `images` folders
@@ -23,7 +23,15 @@ Make sure to check out all our [starter kits](https://github.com/prettystack/), 
 
 ## Configuration
 
-Read the commented `_config.yml` file for more information.
+Read the commented `_config.yml` file for basic configuration.
+
+### Theme selection
+
+You must load the theme configuration in addition to the standard `_config.yml` file when you launch Jekyll. The extra configuration is located in the theme subdirectory (for instance: _themes/striped/_config.yml).
+
+```bash
+$ jekyll serve --watch --config _config.yml,themes/striped/_config.yml
+```
 
 ### Disqus integration
 
@@ -41,7 +49,7 @@ Add your disqus shortname in *_config.yml* to enable disqus threads. For correct
 
 * *Striped!* theme from [HTML5 UP](http://html5up.net/) (Creative Commons Attribution 3.0).
 
-### Placeholder
+### Placeholders
 
 * Text: "The Ingenious Gentleman Don Quixote of La Mancha" by Miguel de Cervantes (public domain)
 * Illustrations by Gustave Doré (public domain)
