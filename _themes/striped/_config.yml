@@ -1,0 +1,17 @@
+
+# ---------------------------------------------------------
+# Assets pipeline configuration
+# ---------------------------------------------------------
+assets:
+  dirname: assets
+  baseurl: /assets/
+  js_compressor: uglifier
+  css_compressor: sass
+  sources:
+    - ./_themes/striped/_assets/javascripts
+    - ./_themes/striped/_assets/stylesheets
+    - ./_themes/striped/_assets/images
+# ---------------------------------------------------------
+# Jekyll internal conf
+# ---------------------------------------------------------
+layouts: ./_themes/striped/_layouts/

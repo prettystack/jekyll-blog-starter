@@ -1,8 +1,8 @@
 # ---------------------------------------------------------
-# Theme selection
-# (theme should be installed in ./themes/ directory)
+# For theme selection, add the theme extra configuration:
+# jekyll serve --watch --config _config.yml,./_themes/striped/_config.yml
+# (theme are located in the ./_themes/ directory)
 # ---------------------------------------------------------
-source: ./themes/striped
 
 # ---------------------------------------------------------
 # Blog configuration
@@ -26,22 +26,10 @@ disqus:
 
 
 # ---------------------------------------------------------
-# Assets pipeline configuration
-# ---------------------------------------------------------
-assets:
-  dirname: assets
-  baseurl: /assets/
-  # js_compressor: uglifier
-  # css_compressor: sass
-
-# ---------------------------------------------------------
 # Jekyll internal conf
 # ---------------------------------------------------------
 markdown: kramdown
 pygments: true
 exclude: ["readme.md", "LICENSE", "Gemfile"]
-# Force standard directory for plugins and generation
-destination: ./_site
-plugins: ./_plugins
 # Jekyll truncate post at this separator to provide an excerpt on index
 excerpt_separator: <!--more-->
