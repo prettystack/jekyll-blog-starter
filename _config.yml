@@ -1,24 +1,35 @@
+
 # ---------------------------------------------------------
-# For theme selection, add the theme extra configuration:
-# jekyll serve --watch --config _config.yml,./_themes/striped/_config.yml
+# Theme selection
+# You need to add the theme extra configuration on your command line:
+# jekyll serve --config _config.yml,./_themes/striped/_config.yml
 # (theme are located in the ./_themes/ directory)
 # ---------------------------------------------------------
 
 # ---------------------------------------------------------
-# Blog configuration
+# Blog conf
 # ---------------------------------------------------------
-# Site name
-name: Don Quiblog
+# Site info:
+title: Don Quiblog
+description: "A great blog about adventure, love and knighthood."
+copyright: '<a href="http://prettystack.com">Prettystack</a>.<br />Design: <a href="http://html5up.net/">HTML5 UP</a>'
+
+# Author info:
+author:
+  name: Prettystack Team
+  picture: 
+  email: contact@prettystack.com
 
 # Number of posts per page on index
 paginate: 2
+permalink: /:categories/:title.html
 
-# Only use this variable when absolutely necessary (sitemap.txt)
+# Site domain name (for sitemap.txt generation)
 production_url : http://prettystack.com/striped/jekyll
 
 
 # ---------------------------------------------------------
-# Third party services configuration
+# Third party services conf
 # ---------------------------------------------------------
 # Disqus conf, comment these lines to disable Disqus
 disqus:
@@ -28,8 +39,24 @@ disqus:
 # ---------------------------------------------------------
 # Jekyll internal conf
 # ---------------------------------------------------------
+# use kramdown with github extra syntax
 markdown: kramdown
-pygments: true
-exclude: ["readme.md", "LICENSE", "Gemfile"]
+kramdown:
+  input: GFM
+  auto_ids: true
+  entity_output: as_char
+  #coderay is used to highlight syntax of fenced code blocks
+  use_coderay: true
+  coderay:
+    coderay_line_numbers: nil #can be nil, inline, list, table
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: class
+
+highlighter: pygments
+include: ['.htaccess']
+exclude: ['readme.md', 'LICENSE', 'Gemfile']
+safe: false
 # Jekyll truncate post at this separator to provide an excerpt on index
 excerpt_separator: <!--more-->

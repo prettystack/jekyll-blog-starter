@@ -4,7 +4,7 @@
 
 This is a starter kit to build a [Jekyll](http://jekyllrb.com) powered blog in a matter of minutes. It contains optional integration to external services such as Disqus, Google Analytics, Facebook, ... This starter kit comes with a superb theme by [HTML5 UP](http://html5up.net/) and some placeholder content from the [Gutenberg project](http://www.gutenberg.org/).
 
-Make sure to check out all our [starter kits](https://github.com/prettystack/), we will soon have starter kit for corporate website and admin interface.
+Make sure to check out all our [starter kits](https://github.com/prettystack/), we will soon have starter kits for corporate website and admin interface.
 
 ![Striped Preview](http://prettystack.com/img/60964924.donquiblog3.png)
 
@@ -48,6 +48,7 @@ Add your disqus shortname in *_config.yml* to enable disqus threads. For correct
 ### Theme
 
 * *Striped!* theme from [HTML5 UP](http://html5up.net/) (Creative Commons Attribution 3.0).
+* Syntax highlighting from [coderay github theme](https://github.com/danielpietzsch/CodeRay-GitHub-Theme)
 
 ### Placeholders
 
