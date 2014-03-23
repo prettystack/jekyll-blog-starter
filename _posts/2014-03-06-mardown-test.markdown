@@ -6,20 +6,13 @@ date:   2014-03-06 15:10:00
 categories: test
 ---
 
-
-On July 2, an alien mothership entered Earth's orbit and deployed several dozen saucer-shaped "destroyer" spacecraft, each 15 miles (24 km) wide.
-
-On July 3, the Black Knights, a squadron of Marine Corps F/A-18 Hornets, participated in an assault on a destroyer near the city of Los Angeles.
+This page is a demo of markdown rendering.
 
 <!--more-->
 
 ------
 
-
-[Visit GitHub!](www.github.com)
-
 It's very easy to make some words **bold** and other words *italic* with Markdown. You can even [link to Google!](http://google.com).
-
 
 
 Sometimes you want numbered lists:
@@ -40,14 +33,13 @@ Alternatively,
   - Like this
   - And this
 
+------
 
 If you want to embed images, this is how you do it:
 
-![](http://octodex.github.com/images/yaktocat.png)
+![Don Quixote by Honoré Daumier](http://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Honor%C3%A9_Daumier_017_%28Don_Quixote%29.jpg/416px-Honor%C3%A9_Daumier_017_%28Don_Quixote%29.jpg)
 
-
-
-# Structured documents
+------
 
 Sometimes it's useful to have different levels of headings to structure your documents. Start lines with a `#` to create headings. Multiple `##` in a row denote smaller heading sizes.
 
@@ -63,38 +55,18 @@ Sometimes it's useful to have different levels of headings to structure your doc
 
 ###### The sixth largest heading (an <h6> tag)
 
-
+------
 
 If you'd like to quote someone, use the > character before the line:
 
-> Coffee. The finest organic suspension ever devised... I beat the Borg with it.
-> - Captain Janeway
+> "Take care, your worship, those things over there are not giants but windmills."
+> - Miguel de Cervantes
 
+------
 
+To use syntax highlighting, use fenced codeblocks and include the language:
 
-There are many different ways to style code with GitHub's markdown. If you have inline code blocks, wrap them in backticks: `var example = true`.  If you've got a longer block of code, you can indent with four spaces:
-
-    if (isAwesome){
-      return true
-    }
-
-GitHub also supports something called code fencing, which allows for multiple lines without indentation:
-
-```
-if (isAwesome){
-  return true
-}
-```
-
-And if you'd like to use syntax highlighting, include the language:
-
-```javascript
-function fancyAlert(arg) {
-  if(arg) {
-    $.facebox({div:'#foo'})
-  }
-}
-```
+A few lines of ruby:
 
 ```ruby
 def show
@@ -106,24 +78,35 @@ def show
 end
 ```
 
-{% highlight ruby %}
-def show
-  @widget = Widget(params[:id])
-  respond_to do |format|
-    format.html # show.html.erb
-    format.json { render json: @widget }
-  end
-end
+and a Fibonacci function in Python:
+
+```python
+def fib(n):
+    a, b = 0, 1
+    while a < n:
+        print(a, end=' ')
+        a, b = b, a+b
+    print()
+```
+
+Alternately more exotic languages can be highlighted with pygment using this special liquid construction, this is some Erlang:
+
+{% highlight erlang %}
+-module(factor).
+-export([factorial/1]).
+
+factorial(0) ->
+    1;
+factorial(N) ->
+    N*factorial(N-1).
 {% endhighlight %}
 
+------
 
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
+Here is how you can create tables (second line is used to specify text alignment):
 
+First Header | Second Header | Third Header
+:----------- | :-----------: | -----------:
+Content from cell 1 | Content from cell 2 | Cell 3
+Content in the first column | Content in the second column | Content in the third column
 
-
-
-
-Any word wrapped with two tildes (like ~~this~~) will appear crossed out.
