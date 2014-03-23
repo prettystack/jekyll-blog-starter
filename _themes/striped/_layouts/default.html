@@ -6,14 +6,15 @@
     <meta name="description" content="{{site.description}}" />
     <meta name="keywords" content="" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
-    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700|Open+Sans+Condensed:300,700" rel="stylesheet" />
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700|Open+Sans+Condensed:300,700" rel="stylesheet" />
     <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
 
-    {% stylesheet app %}
+    <link href="{{site.url}}/{{site.assets.dirname}}/{% asset_path app.css %}" rel="stylesheet">
 
-    <!--[if lte IE 9]><link rel="stylesheet" href="{{ site.url }}/css/ie9.css" /><![endif]-->
-    <!--[if lte IE 8]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><link rel="stylesheet" href="{{ site.url }}/css/ie8.css" /><![endif]-->
-    <!--[if lte IE 7]><link rel="stylesheet" href="{{ site.url }}/css/ie7.css" /><![endif]-->
+
+    <!--[if lte IE 9]><link rel="stylesheet" href="{{site.url}}css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><link rel="stylesheet" href="{{site.url}}css/ie8.css" /><![endif]-->
+    <!--[if lte IE 7]><link rel="stylesheet" href="{{site.url}}css/ie7.css" /><![endif]-->
   </head>
 
   <body class="left-sidebar">
@@ -41,7 +42,7 @@
         <div id="sidebar">
 
             <!-- Logo -->
-            <a href="{{ site.url }}/">
+            <a href="{{ site.url }}">
               <div id="logo">
                 <h1> {{site.title}} </h1>
               </div>
@@ -58,7 +59,7 @@
                   {% if page.url == menu.url %}
                     <li class="current_page_item"><a href="#">{{menu.name}}</a></li>
                   {% else %}
-                    <li><a href="{{menu.url}}">{{menu.name}}</a></li>
+                    <li><a href="{{site.url}}{{menu.url}}">{{menu.name}}</a></li>
                   {% endif %}
                 {% endfor %}
               </ul>
@@ -71,9 +72,9 @@
                 {% for post in site.posts limit:5 %}
 
                   {% if page.url == post.url %}
-                    <li class="current_page_item"><a href="{{ post.url }}">{{ post.title }}</a></li>
+                    <li class="current_page_item"><a href="{{site.url}}{{post.url}}">{{ post.title }}</a></li>
                   {% else %}
-                    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                    <li><a href="{{site.url}}{{post.url}}">{{ post.title }}</a></li>
                   {% endif %}
                 {% endfor %}
               </ul>
@@ -83,7 +84,7 @@
             <section class="is-text-style1">
               <div class="inner">
                 <p>
-                  <a href="/">{{site.title}}</a>:<br />
+                  <a href="{{site.url}}">{{site.title}}</a>:<br />
                   {{site.description}}
                 </p>
               </div>

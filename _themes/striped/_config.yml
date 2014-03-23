@@ -4,7 +4,7 @@
 # ---------------------------------------------------------
 assets:
   dirname: assets
-  baseurl: /assets/
+  baseurl: .
   js_compressor: uglifier
   css_compressor: sass
   sources:

@@ -14,6 +14,10 @@ title: Don Quiblog
 description: "A great blog about adventure, love and knighthood."
 copyright: '<a href="http://prettystack.com">Prettystack</a>.<br />Design: <a href="http://html5up.net/">HTML5 UP</a>'
 
+# Site domain name (for sitemap.txt generation)
+url : http://prettystack.github.io/jekyll-blog-starter
+#url : http://localhost:4000
+
 # Author info:
 author:
   name: Prettystack Team
@@ -23,9 +27,6 @@ author:
 # Number of posts per page on index
 paginate: 3
 permalink: /:categories/:title.html
-
-# Site domain name (for sitemap.txt generation)
-production_url : http://prettystack.com/striped/jekyll
 
 
 # ---------------------------------------------------------

@@ -16,7 +16,7 @@ layout: default
 
     <ul class="stats">
       {% if site.disqus.shortname %}
-        <li><a href="{{ page.url }}#disqus_thread" class="fa fa-comment">?</a></li>
+        <li><a href="{{site.url}}{{page.url}}#disqus_thread" class="fa fa-comment">?</a></li>
       {% endif %}
 <!--       <li><a href="#" class="fa fa-heart">32</a></li>
       <li><a href="#" class="fa fa-twitter">64</a></li>
@@ -25,7 +25,7 @@ layout: default
   </div>
 
   {% if page.image %}
-    <a href="{{ page.url }}" class="image image-full"><img src="{{ site.url }}/images/{{ page.image }}" alt="" /></a>
+    <a href="{{site.url}}{{page.url}}" class="image image-full"><img src="{{site.url}}/images/{{page.image}}" alt="" /></a>
   {% endif %}
 
   <div class="post">
