@@ -6,8 +6,10 @@ This is a starter kit to build a [Jekyll](http://jekyllrb.com) powered blog in a
 
 Make sure to check out all our [starter kits](https://github.com/prettystack/), we will soon have starter kits for corporate website and admin interface.
 
-![Striped Preview](http://prettystack.com/img/60964924.donquiblog3.png)
+### Preview
+[![Striped Preview](http://prettystack.com/img/60964924.donquiblog3.png)](http://prettystack.github.io/jekyll-blog-starter)
 
+Browse the [live preview](http://prettystack.github.io/jekyll-blog-starter) hosted on Github Pages.
 
 ## Getting started
 
