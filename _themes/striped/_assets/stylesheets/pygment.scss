@@ -1,4 +1,10 @@
-.highlight  { background: #ffffff; }
+.highlight  { background: #ffffff;
+  border: 1px solid #CCC;
+  font-family: Monaco, monospace;
+  padding: 1em 0px 1em 1em;
+  line-height: 1.2;
+}
+
 .highlight .c { color: #999988; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
 .highlight .k { font-weight: bold } /* Keyword */

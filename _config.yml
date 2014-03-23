@@ -21,7 +21,7 @@ author:
   email: contact@prettystack.com
 
 # Number of posts per page on index
-paginate: 2
+paginate: 3
 permalink: /:categories/:title.html
 
 # Site domain name (for sitemap.txt generation)
