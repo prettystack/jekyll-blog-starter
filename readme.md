@@ -40,12 +40,28 @@ $ jekyll serve --watch --config _config.yml,themes/striped/_config.yml
 Add your disqus shortname in *_config.yml* to enable disqus threads. For correct display, go to [settings/general](http://disqus.com/admin/settings/general/) and only keep numbers in "Comment Count Link".
 
 
+### Google analytics
+
+Create an account at [google analytics](http://www.google.com/analytics/), and add your tracking ID (should look like UA-12345678-1) in your `_config.yml`.
+
+### Google webmaster
+
+Add your [google webmaster](https://www.google.com/webmasters/) verification code in your `_config.yml`.
+
+
+## Deployment
+
+### Github Pages
+
+Edit the variables in the `Rakefile` to set your Github repository, then you can issue a `rake deploy:github`
+
+
 ## Credits
 
 ### Jekyll
 
 * [Jekyll](http://jekyllrb.com) static site generator. (MIT license)
-* Some pages and ideas from [Jekyll-bootstrap](http://jekyllbootstrap.com/) (MIT license)
+* Some pages and ideas from [Jekyll-bootstrap](http://jekyllbootstrap.com/) (MIT license), [Jekyll-incorporated](https://github.com/kippt/jekyll-incorporated) (MIT license), [Hpstr-jekyll-theme](https://github.com/mmistakes/hpstr-jekyll-theme) (GPL)
 
 ### Theme
 

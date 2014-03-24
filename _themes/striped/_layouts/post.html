@@ -30,10 +30,8 @@ layout: default
 
   <div class="post">
     {{ content }}
-
-  {% if site.disqus.shortname %}
-    {% include disqus_thread.html %}
-  {% endif %}
+ 
+  {% include disqus_thread.html %}
   </div>
 
 </article>
