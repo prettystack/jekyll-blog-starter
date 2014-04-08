@@ -60,7 +60,7 @@
 
 	.pager
 	{
-		padding: 3em 0 0 0;
+		padding: 3em 0;
 	}
 
 		.pager .pages
@@ -75,6 +75,11 @@
 		.pager .next
 		{
 			margin-left: 0.2em;
+		}
+
+		.pager .right
+		{
+			float: right;
 		}
 
 		.pager .pages a

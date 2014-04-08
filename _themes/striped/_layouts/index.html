@@ -49,7 +49,7 @@ The paginator only show a few posts sorted by date, it can be configured in "_co
 {% if paginator.total_pages > 1 %}
 <div class="pager">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.url | replace: '//', '/' }}" class="button previous">&laquo; Prev</a>
+    <a href="{{ paginator.previous_page_path | prepend: site.url }}" class="button previous">&laquo; Prev</a>
   {% else %}
     <span class="button previous">&laquo; Prev</span>
   {% endif %}
@@ -59,15 +59,15 @@ The paginator only show a few posts sorted by date, it can be configured in "_co
       {% if page == paginator.page %}
         <a href="#" class="active">{{ page }}</a>
       {% elsif page == 1 %}
-        <a href="{{ '/index.html' | prepend: site.url | replace: '//', '/' }}">{{ page }}</a>
+        <a href="{{ '/index.html' | prepend: site.url }}">{{ page }}</a>
       {% else %}
-        <a href="{{ site.paginate_path | prepend: site.url | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+        <a href="{{ site.paginate_path | prepend: site.url | replace: ':num', page }}">{{ page }}</a>
       {% endif %}
     {% endfor %}
   </div>
 
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.url | replace: '//', '/' }}" class="button next">Next &raquo;</a>
+    <a href="{{ paginator.next_page_path | prepend: site.url  }}" class="button next">Next &raquo;</a>
   {% else %}
     <span class="button next">Next &raquo;</span>
   {% endif %}

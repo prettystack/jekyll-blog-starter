@@ -30,8 +30,21 @@ layout: default
 
   <div class="post">
     {{ content }}
- 
-  {% include disqus_thread.html %}
   </div>
+ 
+
+  {% comment %} Show link to previous/next post {% endcomment %}
+  <div class="pager">
+    {% if page.next.url %}
+      <a href="{{ page.next.url }}" class="button previous">&laquo; {{page.next.title}}</a>
+    {% endif %}
+
+    {% if page.previous.url %}
+      <a href="{{ page.previous.url }}" class="button next right">{{page.previous.title}} &raquo;</a>
+    {% endif %}
+  </div>
+
+
+  {% include disqus_thread.html %}
 
 </article>
