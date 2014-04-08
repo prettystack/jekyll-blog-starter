@@ -36,11 +36,11 @@ layout: default
   {% comment %} Show link to previous/next post {% endcomment %}
   <div class="pager">
     {% if page.next.url %}
-      <a href="{{ page.next.url }}" class="button previous">&laquo; {{page.next.title}}</a>
+      <a href="{{site.url}}{{ page.next.url }}" class="button previous">&laquo; {{page.next.title}}</a>
     {% endif %}
 
     {% if page.previous.url %}
-      <a href="{{ page.previous.url }}" class="button next right">{{page.previous.title}} &raquo;</a>
+      <a href="{{site.url}}{{ page.previous.url }}" class="button next right">{{page.previous.title}} &raquo;</a>
     {% endif %}
   </div>
 
