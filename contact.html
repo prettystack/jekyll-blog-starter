@@ -3,6 +3,19 @@ layout: contact
 ---
 
 
-<p>Please go to <a href="http://prettystack.com">prettystack.com</a> to contact the team!</p>
+{% if site.author.name %}
 
-<a href="http://prettystack.com" class="image"><img src="{{ site.url }}/images/c27a.jpg" alt="Don quixote" /></a>
+<div>
+{% if site.author.picture %}<img src="{{ site.url }}/images/{{site.author.picture}}" alt="Author picture" /> {% endif %}
+</div>
+
+<ul>
+<li>{{site.author.name}}</li>
+{% if site.author.website %} <li>Website: <a href="{{site.author.website}}">{{site.author.website}}</a></li>{% endif %}
+{% if site.author.email %} <li>Mail: <a href="mailto:{{site.author.email}}">{{site.author.email}}</a></li>{% endif %}
+{% if site.author.twitter %} <li>Twitter: <a href="http://twitter.com/{{site.author.twitter}}">@{{site.author.twitter}}</li>{% endif %}
+{% if site.author.facebook %} <li>Facebook: {{site.author.facebook}}</li>{% endif %}
+{% if site.author.googleplus %} <li>G+: {{site.author.googleplus}}</li>{% endif %}
+</ul>
+
+{% endif %}

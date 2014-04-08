@@ -16,13 +16,17 @@ copyright: '<a href="http://prettystack.com">Prettystack</a>.<br />Design: <a hr
 
 # Site domain name (for sitemap.txt generation)
 url : http://prettystack.github.io/jekyll-blog-starter
-#url : http://localhost:4000
+url : http://localhost:4000
 
 # Author info:
 author:
   name: Prettystack Team
-  picture: 
-  email: contact@prettystack.com
+  picture: c27a.jpg
+  website: http://prettystack.com
+  email: hello@prettystack.com
+  twitter: _prettystack_
+  facebook:
+  googleplus: 
 
 # Number of posts per page on index
 paginate: 3
