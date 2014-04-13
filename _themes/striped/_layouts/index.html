@@ -24,8 +24,10 @@ Display a post preview.
     {% if site.disqus.shortname %}
       <li><a href="{{site.url}}{{post.url}}#disqus_thread" class="fa fa-comment">?</a></li>
     {% endif %}
+    {% if site.author.twitter %}
+      <li><a href="https://twitter.com/share?url={{site.url | UrlEncode }}{{post.url | UrlEncode }}&via={{site.author.twitter}}" class="fa fa-twitter" target="_blank"></a></li>
+    {% endif %}
 <!--       <li><a href="#" class="fa fa-heart">32</a></li>
-      <li><a href="#" class="fa fa-twitter">64</a></li>
       <li><a href="#" class="fa fa-facebook">128</a></li> -->
     </ul>
   </div>
