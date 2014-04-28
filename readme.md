@@ -14,13 +14,14 @@ Browse the [live preview](http://prettystack.github.io/jekyll-blog-starter) host
 ## Getting started
 
 * Clone repository (`git clone https://github.com/prettystack/jekyll-blog-starter.git`)
-* Install [Ruby, Jekyll](http://jekyllrb.com/docs/installation/) and dependencies (see `Gemfile`)
-* Launch test server `jekyll serve --watch --config _config.yml,themes/striped/_config.yml`
+* Install Ruby and Bundler
+* Install project dependencies with `bundle install`
+* Launch test server `jekyll serve --watch --config _config.yml,_themes/striped/_config.yml`
 * Browse the site at [localhost:4000](http://localhost:4000)
 * If necessary you can [migrate your existing blog](http://jekyllrb.com/docs/migrations/)
 * Remove placeholder text and images from `_posts` and `images` folders
 * Customize your `_config.yml` (see configuration below)
-* Add new posts by creating markdown files in the `_posts` directory
+* Add new markdown files in the `_posts` directory to create posts
 
 
 ## Configuration
