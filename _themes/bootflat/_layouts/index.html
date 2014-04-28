@@ -1,0 +1,78 @@
+---
+layout: default
+---
+
+
+{{ content }}
+
+{% comment %}
+Display a post preview.
+{% endcomment %}
+{% for post in paginator.posts %}
+<div class="row">
+  <header>
+    <h2><a href="{{site.url}}{{post.url}}">{{ post.title }}</a></h2>
+    <span class="byline"> {{ post.subtitle }} </span>
+  </header>
+  <div class="info">
+
+    <span class="date">
+      <span class="month">{{ post.date | date: "%b"}}<span></span></span> <span class="day">{{ post.date | date: "%d"}}</span><span class="year">, {{ post.date | date: "%Y"}}</span>
+    </span>
+
+    <ul class="stats">
+    {% if site.disqus.shortname %}
+      <li><a href="{{site.url}}{{post.url}}#disqus_thread" class="fa fa-comment">?</a></li>
+    {% endif %}
+    {% if site.author.twitter %}
+      <li><a href="https://twitter.com/share?url={{site.url | UrlEncode }}{{post.url | UrlEncode }}&via={{site.author.twitter}}" class="fa fa-twitter" target="_blank"></a></li>
+    {% endif %}
+<!--       <li><a href="#" class="fa fa-heart">32</a></li>
+      <li><a href="#" class="fa fa-facebook">128</a></li> -->
+    </ul>
+  </div>
+
+  {% if post.image %}
+    <a href="{{site.url}}{{post.url}}" class="image image-full"><img src="{{ site.url }}/images/{{ post.image }}" alt="" /></a>
+  {% endif %}
+  
+  <div class="post">
+    {{ post.excerpt }}
+  </div>
+
+  <a href="{{site.url}}{{post.url}}" class="image image-full">Continue reading...</a>
+</article>
+{% endfor %}
+
+
+{% comment %}
+The paginator only show a few posts sorted by date, it can be configured in "_config.yml".
+{% endcomment %}
+{% if paginator.total_pages > 1 %}
+<div class="pager">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.url }}" class="button previous">&laquo; Prev</a>
+  {% else %}
+    <span class="button previous">&laquo; Prev</span>
+  {% endif %}
+
+  <div class="pages">
+    {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
+        <a href="#" class="active">{{ page }}</a>
+      {% elsif page == 1 %}
+        <a href="{{ '/index.html' | prepend: site.url }}">{{ page }}</a>
+      {% else %}
+        <a href="{{ site.paginate_path | prepend: site.url | replace: ':num', page }}">{{ page }}</a>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.url  }}" class="button next">Next &raquo;</a>
+  {% else %}
+    <span class="button next">Next &raquo;</span>
+  {% endif %}
+</div>
+{% endif %}
+

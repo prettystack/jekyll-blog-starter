@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>{{ site.title }}</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    {% include google_verification.html %}
+    <meta name="description" content="{{site.description}}" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700,400italic,600italic,700italic,800italic,300italic" rel="stylesheet" type="text/css">
+    
+    <link href="{{site.url}}/{{site.assets.dirname}}/{% asset_path bootstrap.min.css %}" rel="stylesheet">
+    <link href="{{site.url}}/{{site.assets.dirname}}/{% asset_path app.css %}" rel="stylesheet">
+
+
+    <!--[if lte IE 9]><link rel="stylesheet" href="{{site.url}}css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><link rel="stylesheet" href="{{site.url}}css/ie8.css" /><![endif]-->
+    <!--[if lte IE 7]><link rel="stylesheet" href="{{site.url}}css/ie7.css" /><![endif]-->
+  </head>
+<body style="background-color: #f1f2f6;">
+    <div class="docs-header">
+      <!--nav-->
+      <nav class="navbar navbar-default navbar-custom" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+
+
+
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+
+              {% for menu in site.data.menus %}
+                {% if page.url == menu.url %}
+                  <li><a class="nav-link current" href="#">{{menu.name}}</a></li>
+                {% else %}
+                  <li><a class="nav-link" href="{{site.url}}{{menu.url}}">{{menu.name}}</a></li>
+                {% endif %}
+              {% endfor %}
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!--header-->
+      <div class="topic">
+        <div class="container">
+          <h3>{{site.title}} </h3>
+          <h4>{{site.subtitle}} </h4>
+        </div>
+        <div class="topic__infos">
+          <div class="container">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--documents-->
+    <div class="container documents">
+
+      {{ content }}
+
+    </div>
+
+    {% include disqus_count.html %}
+    {% include google_analytics.html %}
+    
+  </body>
+</html>

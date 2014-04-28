@@ -1,0 +1,17 @@
+
+# ---------------------------------------------------------
+# Assets pipeline configuration
+# ---------------------------------------------------------
+assets:
+  dirname: assets
+  baseurl: .
+  js_compressor: uglifier
+  css_compressor: sass
+  sources:
+    - ./_themes/bootflat/_assets/javascripts
+    - ./_themes/bootflat/_assets/stylesheets
+    - ./_themes/bootflat/_assets/images
+# ---------------------------------------------------------
+# Jekyll internal conf
+# ---------------------------------------------------------
+layouts: ./_themes/bootflat/_layouts/

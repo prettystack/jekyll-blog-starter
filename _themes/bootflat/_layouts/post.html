@@ -1,0 +1,50 @@
+---
+layout: default
+---
+
+<article class="is-post">
+
+  <header>
+    <h2><a href="#">{{ page.title }}</a></h2>
+    <span class="byline"> {{ page.subtitle }} </span>
+  </header>
+
+  <div class="info">
+    <span class="date">
+      <span class="month">{{ page.date | date: "%b"}}<span></span></span> <span class="day">{{ page.date | date: "%d"}}</span><span class="year">, {{ page.date | date: "%Y"}}</span>
+    </span>
+
+    <ul class="stats">
+      {% if site.disqus.shortname %}
+        <li><a href="{{site.url}}{{page.url}}#disqus_thread" class="fa fa-comment">?</a></li>
+      {% endif %}    
+      {% if site.author.twitter %}
+        <li><a href="https://twitter.com/share?url={{site.url | UrlEncode }}{{page.url | UrlEncode }}&via={{site.author.twitter}}" class="fa fa-twitter" target="_blank"></a></li>
+      {% endif %}
+    </ul>
+  </div>
+
+  {% if page.image %}
+    <a href="{{site.url}}{{page.url}}" class="image image-full"><img src="{{site.url}}/images/{{page.image}}" alt="" /></a>
+  {% endif %}
+
+  <div class="post">
+    {{ content }}
+  </div>
+ 
+
+  {% comment %} Show link to previous/next post {% endcomment %}
+  <div class="pager">
+    {% if page.next.url %}
+      <a href="{{site.url}}{{ page.next.url }}" class="button previous">&laquo; {{page.next.title}}</a>
+    {% endif %}
+
+    {% if page.previous.url %}
+      <a href="{{site.url}}{{ page.previous.url }}" class="button next right">{{page.previous.title}} &raquo;</a>
+    {% endif %}
+  </div>
+
+
+  {% include disqus_thread.html %}
+
+</article>
